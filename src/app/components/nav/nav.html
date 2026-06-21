@@ -1,0 +1,19 @@
+<div class="nav" role="banner">
+  <div class="wrap">
+    <div class="brand">Tran Tien Dung<span>.</span></div>
+    <div class="nav-right">
+      <nav>
+        @for (link of links; track link.href) {
+          <a [href]="link.href">{{ link.label }}</a>
+        }
+      </nav>
+      <div class="nav-icons">
+        @for (social of socials; track social.icon) {
+          <a class="iconbtn" [href]="social.href" [attr.aria-label]="social.ariaLabel" [title]="social.title">
+            <app-social-icon [name]="social.icon" />
+          </a>
+        }
+      </div>
+    </div>
+  </div>
+</div>

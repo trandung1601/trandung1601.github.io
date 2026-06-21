@@ -1,0 +1,15 @@
+<section id="contact">
+  <div class="wrap">
+    <div class="contact" appReveal>
+      <h2>Let&rsquo;s build something solid.</h2>
+      <p>Available for frontend and full-stack roles. The fastest way to reach me is email — or browse the code on GitHub.</p>
+      <div class="cta">
+        @for (social of socials; track social.icon) {
+          <a class="iconbtn" [class.solid]="social.solid" [href]="social.href" [attr.aria-label]="social.ariaLabel" [title]="social.title">
+            <app-social-icon [name]="social.icon" />
+          </a>
+        }
+      </div>
+    </div>
+  </div>
+</section>

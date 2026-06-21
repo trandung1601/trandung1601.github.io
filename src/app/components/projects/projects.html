@@ -1,0 +1,30 @@
+<section id="projects">
+  <div class="wrap">
+    <div class="shead" appReveal><div class="ey">Projects</div><h2>Flagship systems</h2></div>
+
+    @for (project of projects; track project.name) {
+      <article class="proj" appReveal>
+        <div class="ph">
+          <div><h3>{{ project.name }}</h3><div class="role">{{ project.role }}</div></div>
+          <span class="tag" [class.prod]="project.status.kind === 'prod'" [class.ship]="project.status.kind === 'ship'">{{ project.status.label }}</span>
+        </div>
+        <p class="desc">{{ project.description }}</p>
+        <div class="pm">
+          @for (metric of project.metrics; track $index) {
+            <span>@if (metric.emphasis) {<b>{{ metric.emphasis }}</b>}{{ metric.text }}</span>
+          }
+        </div>
+        <ul class="feat">
+          @for (feature of project.features; track feature) {
+            <li>{{ feature }}</li>
+          }
+        </ul>
+        <div class="stack">
+          @for (tech of project.stack; track tech.label) {
+            <app-tech-chip [chip]="tech" />
+          }
+        </div>
+      </article>
+    }
+  </div>
+</section>

@@ -1,0 +1,8 @@
+<span class="chip">
+  @if (chip().devicon) {
+    <i [class]="chip().devicon"></i>
+  } @else if (chip().symbol) {
+    <svg class="ci"><use [attr.href]="'#' + chip().symbol"></use></svg>
+  }
+  {{ chip().label }}
+</span>

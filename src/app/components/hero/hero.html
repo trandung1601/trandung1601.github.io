@@ -1,0 +1,26 @@
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <span class="pill"><span class="d"></span>Open to frontend / full-stack roles</span>
+        <h1>Senior Frontend / Full-Stack Developer building <span class="accent">production systems</span> that ship.</h1>
+        <p>7+ years at Bosch Global Software Technologies delivering React / TypeScript frontends, Java / Spring Boot services, and React Native apps — for international teams in Germany and Australia.</p>
+        <div class="cta">
+          <a class="btn primary" [href]="mailto"><app-social-icon name="email" />Get in touch</a>
+          <a class="btn ghost" [href]="githubUrl"><app-social-icon name="github" />GitHub</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="profile.jpg" alt="Portrait of Tran Tien Dung" width="480" height="640">
+      </div>
+    </div>
+    <div class="stats">
+      @for (stat of stats; track stat.label) {
+        <div class="stat">
+          <div class="n">{{ stat.value }}@if (stat.suffix) {<b>{{ stat.suffix }}</b>}</div>
+          <div class="l">{{ stat.label }}</div>
+        </div>
+      }
+    </div>
+  </div>
+</header>

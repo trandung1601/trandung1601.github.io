@@ -1,0 +1,10 @@
+<section [id]="sectionId()">
+  <div class="wrap">
+    <div class="shead" appReveal><div class="ey">{{ eyebrow() }}</div><h2>{{ heading() }}</h2></div>
+    <div class="awards" appReveal>
+      @for (item of items(); track item.title) {
+        <div class="award"><div class="t">{{ item.title }}</div><p>{{ item.description }}</p></div>
+      }
+    </div>
+  </div>
+</section>

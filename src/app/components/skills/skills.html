@@ -1,0 +1,17 @@
+<section id="skills">
+  <div class="wrap">
+    <div class="shead" appReveal><div class="ey">Skills</div><h2>Tools I work with</h2></div>
+    <div class="skills" appReveal>
+      @for (group of groups; track group.category) {
+        <div class="skill">
+          <div class="k">{{ group.category }}</div>
+          <div class="vs">
+            @for (item of group.items; track $index) {
+              <app-tech-chip [chip]="item" />
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
